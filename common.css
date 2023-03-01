@@ -1,0 +1,242 @@
+@charset "utf-8";
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul{list-style: none;}
+a{color: #000; text-decoration: none;}
+html{font-family: 'SCoreDream';}
+
+.wow {
+    visibility: visible !important;
+    }
+
+    
+/* 드래그 방지 */
+div{ -webkit-touch-callout: none;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+.header{position: fixed; width: 100%; background-color: transparent; height: 89px; padding: 10px 0; z-index: 99; top: 0; }
+.header .header-wrap{
+    max-width: 1575px; margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0 0 0;
+}
+
+.header .logo{padding: 0 10px;}
+.header .logo a img{ filter: drop-shadow(-4px 4px 5px rgba(3, 0, 0, 0.18));}
+
+.header .etc ul{display: flex; align-items: center; }
+.header .etc > ul > li:nth-child(1){
+    width: 90px;    
+}
+.header .etc > ul > li{align-items: center; padding: 0 15px;}
+
+.header .etc > ul > li a img{
+    filter: drop-shadow(-4px 4px 5px rgba(3, 0, 0, 0.18));
+}
+
+
+
+/* 다크모드 */
+/* 체크박스 지우기 */
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    width: 50px;
+    height: 26px;
+    background-color:#01012b;
+    display: flex;
+    border-radius:50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    transform: scale(1.5);
+    cursor: pointer;
+    filter: drop-shadow(-4px 4px 5px rgba(3, 0, 0, 0.18));
+}
+.ball {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    top: 2.5px;
+    left: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+}
+.fa-moon {color: pink;}
+.fa-sun {color: yellow;}
+
+
+/* 반응형 햄버거 */
+.etc .hbg{
+    position: relative;
+    cursor: pointer;
+    z-index: 910 !important;
+    /* filter: drop-shadow(-4px 4px 5px rgba(3, 0, 0, 0.18)); */
+    display: none;
+}
+.etc .hbg .line{
+    width: 32px;
+    height: 2px;
+    background-color: #222222;
+    border-radius: 4px;
+
+    transition: all 0.3s ease-in-out;
+    margin: 8px 0;
+    box-shadow: -4px 4px 5px rgba(3, 0, 0, 0.18);
+    /* filter: drop-shadow(-4px 4px 5px rgba(3, 0, 0, 0.18)); */
+}
+.etc .hbg.on .line:nth-child(1){
+    -webkit-transform : translateY(10px) rotate(-315deg);
+    transform : translateY(10px) rotate(-315deg);
+}
+.etc .hbg.on .line:nth-child(2){opacity: 0;}
+.etc .hbg.on .line:nth-child(3){
+    -webkit-transform : translateY(-10px) rotate(315deg);
+    transform : translateY(-10px) rotate(315deg);
+}
+
+
+/* 햄버거 안 */
+.hbg-nav{position: fixed; width: 300px; height: 100%; background-color: #fccdbd; z-index: 100; top: 0; right: -300px; box-sizing: border-box; transition: 0.5s; box-shadow: -3px 4px 5px rgba(3, 0, 0, 0.18);}
+.hbg-nav.on{right: 0;}
+.hbg-nav > ul{margin-top: 120px; display: inline-block !important; width: 300px; }
+.hbg-nav ul li{line-height: 60px; margin: 10px 50px;  text-align: center;cursor: pointer; box-shadow:  -7px 7px 14px #eabfb0,
+    7px -7px 14px #ffdbca;  }
+.hbg-nav ul li:hover{ box-shadow:  -2px 2px 3px #eabfb0,
+    2px -2px 3px #ffdbca;}
+.hbg-nav ul li a{font-size: 20px; filter: drop-shadow(-4px 4px 5px rgba(3, 0, 0, 0.18));}
+.hbg-nav ul li:hover a{color: #ff512f;}
+
+
+
+
+
+
+
+
+/* 우클릭 메뉴 */
+.click-menu{position: absolute; width: 120px; border-radius: 10px; z-index: 99999; background-color: #ff512f; display: none;  box-shadow: -3px 4px 5px rgba(3, 0, 0, 0.18);}
+.click-menu ul li{height: 34px; line-height: 34px; text-align: center;}
+.click-menu ul li a{color: #fff; font-size: 15px; display: inline-block; width: 100%; font-family: 'SCoreDream'; font-weight: 400; }
+.click-menu ul li:hover a{font-family: 'SCoreDream'; font-weight: 600; filter: drop-shadow(-4px 4px 5px rgba(3, 0, 0, 0.18));}
+
+
+
+
+
+
+/* 탭 */
+@media screen and (max-width: 1024px){
+    .etc .hbg{display: block;}
+}
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '양진체';
+    src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'SCoreDream';
+    font-weight: 100; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream1.woff2) format('woff2'),
+         url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream1.woff) format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'SCoreDream';
+    font-weight: 200; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream2.woff2) format('woff2'),
+         url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream2.woff) format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'SCoreDream';
+    font-weight: 300; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream3.woff2) format('woff2'),
+         url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream3.woff) format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'SCoreDream';
+    font-weight: 400; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream4.woff2) format('woff2'),
+         url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream4.woff) format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'SCoreDream';
+    font-weight: 500; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream5.woff2) format('woff2'),
+         url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream5.woff) format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'SCoreDream';
+    font-weight: 600; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream6.woff2) format('woff2'),
+         url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream6.woff) format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'SCoreDream';
+    font-weight: 700; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream7.woff2) format('woff2'),
+         url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream7.woff) format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'SCoreDream';
+    font-weight: 800; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream8.woff2) format('woff2'),
+        url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream8.woff) format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'SCoreDream';
+    font-weight: 900; 
+    font-style: normal; 
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream9.woff2) format('woff2'),
+        url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream9.woff) format('woff');
+    font-display: swap;
+}

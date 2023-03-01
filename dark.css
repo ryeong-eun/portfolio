@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+/* 웹/디자인 */
+[data-dark="true"] .wd .left{background-image: url(../images/dark-main-bg-img.jpg); background-repeat: no-repeat;}
+[data-dark="true"] .wd .right{background-color: #e6d0d0;}
+[data-dark="true"] .wd .right .content .btn button{
+    color: #fafafa;
+    background: #292929;
+    box-shadow:  -3px 3px 15px #baa8a8, 3px -3px 15px #fde5e5, inset 3px -3px 10px #151515 , inset -3px 3px 10px #4e4e4e; 
+    /* af9e9e */
+}
+[data-dark="true"] .wd .right .content .btn button:hover{
+    box-shadow:  -3px 3px 15px #baa8a8, 3px -3px 15px #fde5e5, inset 3px -3px 5px #4e4e4e , inset -3px 3px 5px #151515; 
+    transition: 500ms;
+    color: #fe5837;
+}
+
+
+[data-dark="true"] .wd .right .content .btn .btn1{
+    color: #ffffff;
+    background: #fe5837;
+    box-shadow:  -3px 3px 15px #baa8a8, 3px -3px 15px #fde5e5, inset 3px -3px 10px #a33823 , inset -3px 3px 10px #ff784b; 
+    transition: 500ms;
+}
+[data-dark="true"] .wd .right .content .btn .btn1:hover{
+    color: #ffffff;
+    background: #fe5837;
+    box-shadow:  -3px 3px 15px   #baa8a8, 3px -3px 15px #fde5e5, inset 3px -3px 5px  #ff784b , inset -3px 3px 5px #a33823; 
+    transition: 500ms;
+}
+
+
+[data-dark="true"] .wd .right .content .player .audio-box .progress .play-time{color: #444a5b;}
+[data-dark="true"] .wd .right .content .player .audio-box .progress .play-progress-box{background-color: #a79ca3; }
+
+
+[data-dark="true"] .wd .right .list{background-color:#292929;}
+[data-dark="true"] .wd .right .list ul li .t a{color: #fafafa; }
+[data-dark="true"] .wd .right .list ul li .t p{color: #e0e0e0; }
+[data-dark="true"] .wd .right .list ul li:hover{background-color: #e6d0d0}
+[data-dark="true"] .wd .right .list ul li.on{background-color: #e6d0d0;box-shadow: inset 1px -1px 18px 0px rgba(0, 0, 0, 0.08);}
+
+
+
+/* ABOUT */
+[data-dark="true"] .ab-main{background-image: url(../images/dark-etc-bgimg.jpg);}
+[data-dark="true"] .ab-main .txt .me span{color: #fafafa;}
+[data-dark="true"] .ab-main .txt .me p{ color: #fafafa;}
+
+[data-dark="true"] .about{background-color: #292929;}
+[data-dark="true"] .about .desc span{color: #fafafa;}
+[data-dark="true"] .about .desc p{color: #fafafa;}
+
+[data-dark="true"] .psb{background-color: #424242;}
+[data-dark="true"] .psb .left span{color: #fafafa;}
+[data-dark="true"] .psb .left .subtitle em{color: #fafafa;  }
+[data-dark="true"] .psb .left .subtitle p:last-child{color: #fafafa;  }
+
+
+[data-dark="true"] .skill{background-color: #292929;}
+[data-dark="true"] .skill span,
+[data-dark="true"] .skill P{color: #fafafa;}
+
+
+
+/* 라이프 */
+[data-dark="true"] .life-main{background-image: url(../images/dark-etc-bgimg.jpg);}
+[data-dark="true"] .life{background-color: #292929;}
+[data-dark="true"] .life span{color: #fe5837; }
+[data-dark="true"] .life p{color: #fafafa;}
+
+
+/* 햄버거 */
+[data-dark="true"] .etc .hbg .line{background-color: #fafafa;}
+[data-dark="true"] .hbg-nav{background-color: #404860;}
+[data-dark="true"] .hbg-nav ul li a{color: #fafafa;}
+[data-dark="true"] .hbg-nav ul li{box-shadow:   -7px 7px 14px #394055, 7px -7px 14px  #47506b; }
+    [data-dark="true"] .hbg-nav ul li:hover{box-shadow:  -2px 2px 3px #394055, 2px -2px 3px  #47506b;}
