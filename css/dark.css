@@ -68,3 +68,11 @@
 [data-dark="true"] .life{background-color: #292929;}
 [data-dark="true"] .life span{color: #fe5837; }
 [data-dark="true"] .life p{color: #fafafa;}
+
+
+/* 햄버거 */
+[data-dark="true"] .etc .hbg .line{background-color: #fafafa;}
+[data-dark="true"] .hbg-nav{background-color: #404860;}
+[data-dark="true"] .hbg-nav ul li a{color: #fafafa;}
+[data-dark="true"] .hbg-nav ul li{box-shadow:   -7px 7px 14px #394055, 7px -7px 14px  #47506b; }
+    [data-dark="true"] .hbg-nav ul li:hover{box-shadow:  -2px 2px 3px #394055, 2px -2px 3px  #47506b;}

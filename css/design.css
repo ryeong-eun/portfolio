@@ -404,11 +404,97 @@
 
 
 
-
+/* 반응형 */
 @media screen and (max-width: 1480px){
     .main{
         position: absolute; 
-        margin-top: 200px; 
+        /* margin-top: 200px;  */
         right: 75%;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1277px){
+    /* 버튼 */
+    .wd .right .content .btn button{
+        font-size: 16px;
+        line-height: 42px;
+        width: 180px;
+    }
+}
+
+@media screen and (max-width: 1160px){
+    .main{
+        position: absolute; 
+        /* margin-top: 200px;  */
+        right: 70%;
+    }
+    .wd .left{flex-basis: 55%;}
+    .wd .right{
+        flex-basis: 45%;
+        /* width: 500px; */
+    }
+     /* 오디오플레이어 */
+    .wd .right .content .player .audio-box{display: flex; flex-wrap: wrap; text-align: center; align-items: center; justify-content: center;}
+     /* 버튼 */
+    .wd .right .content .btn{max-width: 500px; margin: 0 auto; margin-top: 65px; }
+    .wd .right .content .btn button{
+        font-size: 15px;
+        line-height: 40px;
+        max-width: 140px;
+        /* margin: 1% 0; */
+        margin: 0 auto;
+        justify-content: center;
+    }
+}
+/* 탭 */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .wd .left{display: none;}
+    .wd .right{
+        flex-basis: 100%;
+    }
+    /* 버튼 */
+    .wd .right .content .btn button{
+        font-size: 16px;
+        line-height: 42px;
+        width: 180px;
+    }
+    /* 버튼 */
+    .wd .right .content .btn{max-width: 600px; margin: 0 auto; margin-top: 65px;}
+    /* .wd .right .content .btn button{
+        font-size: 15px;
+        line-height: 40px;
+        width: 140px;
+    } */
+}
+/* 모바일 */
+@media screen and (max-width: 767px){
+    .wd .left{display: none;}
+    /* 오른쪽 */
+    .wd .right{
+        flex-basis: 100%;
+    }
+    /* .wd .right .content .player .audio-box{display: flex; flex-wrap: wrap;} */
+    /* .wd .right .content .player .audio-box .progress{
+        width: 200px;
+    } */
+}
+@media screen and (max-width: 665px){
+    /* 오디오플레이어 */
+    .wd .right .content .player .audio-box{display: flex; flex-wrap: wrap; text-align: center; align-items: center; justify-content: center;}
+    /* .wd .right .content .player .audio-box .plbtn{mb10} */
+    /* .wd .right .content .player .audio-box .progress{
+        margin-top: 12px;
+    } */
+
+
+    /* 버튼 */
+    .wd .right .content .btn{max-width: 500px; margin: 0 auto; margin-top: 65px;}
+    .wd .right .content .btn button{
+        font-size: 15px;
+        line-height: 40px;
+        width: 140px;
     }
 }

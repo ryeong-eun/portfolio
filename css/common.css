@@ -30,12 +30,12 @@ div{ -webkit-touch-callout: none;
 .header .logo a img{ filter: drop-shadow(-4px 4px 5px rgba(3, 0, 0, 0.18));}
 
 .header .etc ul{display: flex; align-items: center; }
-.header .etc ul li:nth-child(1){
+.header .etc > ul > li:nth-child(1){
     width: 90px;    
 }
-.header .etc ul li{align-items: center; padding: 0 15px;}
+.header .etc > ul > li{align-items: center; padding: 0 15px;}
 
-.header .etc ul li a img{
+.header .etc > ul > li a img{
     filter: drop-shadow(-4px 4px 5px rgba(3, 0, 0, 0.18));
 }
 
@@ -79,15 +79,69 @@ div{ -webkit-touch-callout: none;
 .fa-sun {color: yellow;}
 
 
+/* 반응형 햄버거 */
+.etc .hbg{
+    position: relative;
+    cursor: pointer;
+    z-index: 910 !important;
+    /* filter: drop-shadow(-4px 4px 5px rgba(3, 0, 0, 0.18)); */
+    display: none;
+}
+.etc .hbg .line{
+    width: 32px;
+    height: 2px;
+    background-color: #222222;
+    border-radius: 4px;
+
+    transition: all 0.3s ease-in-out;
+    margin: 8px 0;
+    box-shadow: -4px 4px 5px rgba(3, 0, 0, 0.18);
+    /* filter: drop-shadow(-4px 4px 5px rgba(3, 0, 0, 0.18)); */
+}
+.etc .hbg.on .line:nth-child(1){
+    -webkit-transform : translateY(10px) rotate(-315deg);
+    transform : translateY(10px) rotate(-315deg);
+}
+.etc .hbg.on .line:nth-child(2){opacity: 0;}
+.etc .hbg.on .line:nth-child(3){
+    -webkit-transform : translateY(-10px) rotate(315deg);
+    transform : translateY(-10px) rotate(315deg);
+}
+
+
+/* 햄버거 안 */
+.hbg-nav{position: fixed; width: 300px; height: 100%; background-color: #fccdbd; z-index: 100; top: 0; right: -300px; box-sizing: border-box; transition: 0.5s; box-shadow: -3px 4px 5px rgba(3, 0, 0, 0.18);}
+.hbg-nav.on{right: 0;}
+.hbg-nav > ul{margin-top: 120px; display: inline-block !important; width: 300px; }
+.hbg-nav ul li{line-height: 60px; margin: 10px 50px;  text-align: center;cursor: pointer; box-shadow:  -7px 7px 14px #eabfb0,
+    7px -7px 14px #ffdbca;  }
+.hbg-nav ul li:hover{ box-shadow:  -2px 2px 3px #eabfb0,
+    2px -2px 3px #ffdbca;}
+.hbg-nav ul li a{font-size: 20px; filter: drop-shadow(-4px 4px 5px rgba(3, 0, 0, 0.18));}
+.hbg-nav ul li:hover a{color: #ff512f;}
+
+
+
+
+
+
+
 
 /* 우클릭 메뉴 */
-.click-menu{position: absolute; width: 120px; border-radius: 10px; z-index: 99999; background-color: #ff512f; display: none;}
+.click-menu{position: absolute; width: 120px; border-radius: 10px; z-index: 99999; background-color: #ff512f; display: none;  box-shadow: -3px 4px 5px rgba(3, 0, 0, 0.18);}
 .click-menu ul li{height: 34px; line-height: 34px; text-align: center;}
 .click-menu ul li a{color: #fff; font-size: 15px; display: inline-block; width: 100%; font-family: 'SCoreDream'; font-weight: 400; }
 .click-menu ul li:hover a{font-family: 'SCoreDream'; font-weight: 600; filter: drop-shadow(-4px 4px 5px rgba(3, 0, 0, 0.18));}
 
 
 
+
+
+
+/* 탭 */
+@media screen and (max-width: 1024px){
+    .etc .hbg{display: block;}
+}
 
 
 

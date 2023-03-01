@@ -6,6 +6,16 @@ $(document).ready(function () {
     }).init()
 
 
+    // 햄버거
+    $(".etc .hbg").click(function(){
+        $(".etc .hbg").toggleClass("on")
+        $(".hbg-nav").toggleClass("on")
+    })
+
+
+
+
+    // 우클릭 메뉴
     // 전체화면 선택 "html,body"
     $("html,body").contextmenu(function(e){
         // 우측마우스 방지 코드 (a는 위로올라가는 것 방지코드?)

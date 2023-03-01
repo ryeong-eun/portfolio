@@ -29,11 +29,29 @@ $(document).ready(function () {
         circle.animate(per)
     }
 
-    skill("#ps", 0.9, "#130b53");
-    skill("#ai", 0.8, "#8d1717");
-    skill("#html", 0.85, "#f35825");
-    skill("#css", 0.75, "#007bc9 ");
-    skill("#js", 0.6, "#fb9e21");
+    // skill("#ps", 0.9, "#130b53");
+    // skill("#ai", 0.8, "#8d1717");
+    // skill("#html", 0.85, "#f35825");
+    // skill("#css", 0.75, "#007bc9 ");
+    // skill("#js", 0.6, "#fb9e21");
+
+
+    let a = false;
+    $(window).scroll(function (){
+        let pos = $(this).scrollTop()
+        console.log(pos)
+        if(pos > 1890 && a == false){
+            skill("#ps", 0.9, "#45b7ff");
+            skill("#ai", 0.8, "#8d1717");
+            skill("#html", 0.85, "#f35825");
+            skill("#css", 0.75, "#0472b7 ");
+            skill("#js", 0.6, "#fb9e21");
+            a = true;
+        }
+    })
+
+
+
 
 
 
