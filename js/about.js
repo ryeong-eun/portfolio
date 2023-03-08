@@ -12,49 +12,6 @@ $(document).ready(function () {
     }).init()
 
 
-    // 프로그레스바
-    // 기능을 먼저 선언. 매개변수값(id, per, color, time 등등)이 함수에 들어가서 동작/ skill 이름은 편하는 대로
-    function skill(id, per, color){
-        let circle = new ProgressBar.Circle(id,{
-            strokeWidth: 7,
-            // 배경 너비
-            trailWidth: 6,
-            trailColor: "#414141",
-            color: color,
-            duration: 1400,
-            step: function(state, circle){
-                circle.setText(Math.round(circle.value()*100)+"%")
-            }
-        })
-        circle.animate(per)
-    }
-
-    // skill("#ps", 0.9, "#130b53");
-    // skill("#ai", 0.8, "#8d1717");
-    // skill("#html", 0.85, "#f35825");
-    // skill("#css", 0.75, "#007bc9 ");
-    // skill("#js", 0.6, "#fb9e21");
-
-
-    let a = false;
-    $(window).scroll(function (){
-        let pos = $(this).scrollTop()
-        console.log(pos)
-        if(pos > 1890 && a == false){
-            skill("#ps", 0.9, "#45b7ff");
-            skill("#ai", 0.8, "#8d1717");
-            skill("#html", 0.85, "#f35825");
-            skill("#css", 0.75, "#0472b7 ");
-            skill("#js", 0.6, "#fb9e21");
-            a = true;
-        }
-    })
-
-
-
-
-
-
     // 플로팅메뉴
     let floating_top = parseInt($(".floating").css("top"))
     // alert(floating_top)
@@ -126,6 +83,62 @@ $(document).ready(function () {
             }
         }
     })
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // 프로그레스바
+    // 기능을 먼저 선언. 매개변수값(id, per, color, time 등등)이 함수에 들어가서 동작/ skill 이름은 편하는 대로
+    function skill(id, per, color){
+        let circle = new ProgressBar.Circle(id,{
+            strokeWidth: 7,
+            // 배경 너비
+            trailWidth: 6,
+            trailColor: "#414141",
+            color: color,
+            duration: 1400,
+            step: function(state, circle){
+                circle.setText(Math.round(circle.value()*100)+"%")
+            }
+        })
+        circle.animate(per)
+    }
+
+    // skill("#ps", 0.9, "#130b53");
+    // skill("#ai", 0.8, "#8d1717");
+    // skill("#html", 0.85, "#f35825");
+    // skill("#css", 0.75, "#007bc9 ");
+    // skill("#js", 0.6, "#fb9e21");
+
+
+    let a = false;
+    $(window).scroll(function (){
+        let pos = $(this).scrollTop()
+        console.log(pos)
+        if(pos > 1890 && a == false){
+            skill("#ps", 0.9, "#45b7ff");
+            skill("#ai", 0.8, "#8d1717");
+            skill("#html", 0.85, "#f35825");
+            skill("#css", 0.75, "#0472b7 ");
+            skill("#js", 0.6, "#fb9e21");
+            a = true;
+        }
+    })
+
+
+
+
+
+
 
 
 

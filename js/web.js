@@ -180,7 +180,7 @@ $btn_prev.click(function(){
     const $button = $(".wd .right .content .content-wrap .btn .process") 
     const work_img = [
         "../images/aveda web prosess.jpg",
-        "../images/pc.png",
+        "../images/jeep web process.jpg",
         "../images/app-process.jpg"
     ]
 

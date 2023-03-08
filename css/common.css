@@ -10,12 +10,12 @@ html{font-family: 'SCoreDream';}
 
     
 /* 드래그 방지 */
-div{ -webkit-touch-callout: none;
+/* div{ -webkit-touch-callout: none;
     user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
-}
+} */
 
 .header{position: fixed; width: 100%; background-color: transparent; height: 89px; padding: 10px 0; z-index: 99; top: 0; }
 .header .header-wrap{
