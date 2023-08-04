@@ -179,10 +179,10 @@ $btn_prev.click(function(){
     // 모달창
     const $modal = $(".wd .right .content .content-wrap .desc .img") 
     const work_img = [
-        "../images/dyson detail page.jpg",
-        "../images/kakao event page.jpg",
-        "../images/bamboo package.jpg",
-        "../images/misorea logo.jpg"
+        "./images/dyson detail page.jpg",
+        "./images/kakao event page.jpg",
+        "./images/bamboo package.jpg",
+        "./images/misorea logo.jpg"
     ]
 
     $modal.click(function(e){
