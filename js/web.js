@@ -179,9 +179,9 @@ $btn_prev.click(function(){
     // 모달창
     const $button = $(".wd .right .content .content-wrap .btn .process") 
     const work_img = [
-        "../images/aveda web prosess.jpg",
-        "../images/jeep web process.jpg",
-        "../images/app-process.jpg"
+        "./images/aveda web prosess.jpg",
+        "./images/jeep web process.jpg",
+        "./images/app-process.jpg"
     ]
 
     $button.click(function(e){
