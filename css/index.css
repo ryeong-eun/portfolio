@@ -1,0 +1,439 @@
+@charset "utf-8";
+
+[data-dark="true"] body{background-image: url(../images/dark-main-bg-img.jpg); z-index: 0; 
+    background-repeat: no-repeat;
+    width: 100%;
+    background-color: #ad99a4;
+    z-index: 1;
+}
+
+
+
+body{
+    background-image: url(../images/main-bg-img.jpg); z-index: 0; 
+    background-repeat: no-repeat;
+    width: 100%;
+    background-color: #e9d7ca;
+}
+
+
+
+.main{width: 100%; margin-top: 200px; }
+.main .main-wrap{max-width: 916px; margin: 0 auto; display: flex; position: relative;  }
+.main .lp{z-index: 2;}
+/* lp그림자 */
+.main .lp::after{
+    content: "";
+    position: absolute;
+    background-image: url(../images/lp-shadow.png);
+    background-repeat: no-repeat;
+    width: 650px;
+    height: 72px;
+    bottom: -0.5%;
+    left: -5.8%;
+    z-index: -2;
+    /* width: 100%; height: 100%;
+    bottom: -88%;
+    left: -5.8%; */
+}
+.main .lp img{width: 100%; vertical-align: bottom; }
+
+
+.main .record{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    /* left: 378px; */
+    /* z-index: 1; */
+    /* 애니메이션 */
+    animation-name: move;
+    /* 얼마에 걸쳐 일어날지 지정 */
+    animation-duration: 2s;
+    /* 로드되고 나서 언제 애니메이션 시작 */
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+/* 레코드 그림자 */
+.main .record::after{
+    content: "";
+    position: absolute;
+    background-image: url(../images/record-shadow.png);
+    background-repeat: no-repeat;
+    width: 354px;
+    height: 90px;
+    left: 130px;
+    bottom: -4px;
+    z-index: -2;
+}
+
+.main .record .rotate{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    height: 538px;
+    /* left: 378px; */
+    /* z-index: 1; */
+    /* 애니메이션 */
+    animation-name: rotate;
+    /* 얼마에 걸쳐 일어날지 지정 */
+    animation-duration: 2s;
+    /* 로드되고 나서 언제 애니메이션 시작 */
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+.main .record .rotate img{ bottom: 0;}
+
+/* .main .record img{
+    width: 100%;
+    position: relative;
+} */
+
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes move{
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 378px;
+    }
+}
+
+
+/* 메뉴 */
+.main .record .menu{
+    position: absolute;
+    background-color: transparent;
+    /* background-color: yellowgreen; */
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    /* margin: auto; */
+    top: 26.5%;
+    left: 135px;
+    z-index: 5;
+}
+.main .record .menu ul{
+    position: absolute;
+    top: 50%;
+    left: 98%;
+    transform: translate(0%, -50%);
+    z-index: 100;
+}
+.main .record .menu ul li{
+    width: 9.6em;
+    height: 3em;
+    text-align: left;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    background-color: transparent;
+    /* background-color: violet; */
+    cursor: pointer;
+    z-index: 999;
+
+}
+.main .record .menu ul li a{
+    font-family: '양진체';
+    color: #fff;
+    text-decoration: none;
+    font-size: 19px;
+    line-height: 2.45em;
+    padding-left: 34%;
+    cursor: pointer;
+}
+.main .record .menu ul li:hover a{color: #fe5837;}
+.main .record .menu ul li:nth-of-type(2) a{letter-spacing: -1px;}
+.main .record .menu ul li:not(:nth-child(2)) a{letter-spacing: 1.5px;}
+
+.main .record .menu ul li:nth-of-type(1){
+    transform: rotate(-37deg);
+    position: absolute;
+    top: -8.8em;
+    left: -2.2em;
+}
+
+.main .record .menu ul li:nth-of-type(2){
+    transform: rotate(-12deg);
+    position: absolute;
+    top: -4.1em;
+}
+.main .record .menu ul li:nth-of-type(3){
+    transform: rotate(12deg);
+    position: absolute;
+    top: 1.1em;
+}
+.main .record .menu ul li:nth-of-type(4){
+    transform: rotate(37deg);
+    position: absolute;
+    top: 5.8em;
+    left: -2.2em;
+}
+
+
+/* 카피라이트 */
+.footer{max-width: 1575px; margin: 0 auto; text-align: left;}
+.footer p{
+    margin-top: 140px;
+    margin-left: 5%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+/* 반응형 */
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    /* .main .record .rotate .menu{display: none; } */
+
+    /* 메뉴 */
+    .main .record .menu{
+        width: 180px;
+        height: 180px;
+        left: 110px;
+
+    }
+    .main .record .menu ul li{
+        width: 8em;
+        height: 2.5em;
+    }
+    .main .record .menu ul li a{
+        font-size: 15px;
+        line-height: 2.5em;
+        padding-left: 32%;
+    }
+    .main .record .menu ul li:nth-of-type(1){
+        transform: rotate(-39deg);
+        position: absolute;
+        top: -6.8em;
+        left: -1.8em;
+    }
+    
+    .main .record .menu ul li:nth-of-type(2){
+        transform: rotate(-12deg);
+        position: absolute;
+        top: -3.1em;
+    }
+    .main .record .menu ul li:nth-of-type(3){
+        transform: rotate(12deg);
+        position: absolute;
+        top: 1.1em;
+    }
+    .main .record .menu ul li:nth-of-type(4){
+        transform: rotate(39deg);
+        position: absolute;
+        top: 4.8em;
+        left: -1.8em;
+    }
+
+
+
+    .main .main-wrap{max-width: 765px; margin: 0 auto; display: flex; position: relative;  }
+    .main .lp{z-index: 2; width: 60%; padding-left: 2%;}
+    /* lp그림자 */
+    .main .lp::after{
+        content: "";
+        position: absolute;
+        background-image: url(../images/lp-shadow.png);
+        background-repeat: no-repeat;
+        width: 490px;
+        height: 72px;
+        bottom: -0.5%;
+        left: -5%;
+        z-index: -2;
+        /* display: none; */
+    }
+    .main .lp img{width: 100%; vertical-align: bottom; }
+
+
+    .main .record{
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        bottom: 0;
+        left: 45px;
+        /* left: 320px; */
+        /* z-index: 1; */
+        /* 애니메이션 */
+        animation-name: move;
+        /* 얼마에 걸쳐 일어날지 지정 */
+        animation-duration: 2s;
+        /* 로드되고 나서 언제 애니메이션 시작 */
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        /* animation-play-state:paused; */
+        /* display: none; */
+    }
+    /* 레코드 그림자 */
+    .main .record::after{
+        content: "";
+        position: absolute;
+        background-image: url(../images/record-shadow.png);
+        background-repeat: no-repeat;
+        width: 354px;
+        height: 90px;
+        left: 70px;
+        bottom: -4px;
+        z-index: -2;
+        /* display: none; */
+    }
+
+    .main .record .rotate{
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        bottom: 0;
+        height: 405.58px;
+        /* left: 378px; */
+        /* z-index: 1; */
+        /* 애니메이션 */
+        animation-name: rotate;
+        /* 얼마에 걸쳐 일어날지 지정 */
+        animation-duration: 2s;
+        /* 로드되고 나서 언제 애니메이션 시작 */
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        /* animation-play-state:paused; */
+    }
+    .main .record .rotate img{ bottom: 0; width: 405.58px;}
+
+    @keyframes rotate{
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes move{
+        0%{
+            /* left: 0; */
+        }
+        100%{
+            left: 320px;
+        }
+    }
+
+
+    /* 카피라이트 */
+    .footer{margin-bottom: 15px;}
+    .footer p{
+        font-size: 18px;
+        line-height:50px;
+    }
+}
+
+/* 모바일 */
+@media screen and (max-width: 767px){
+    body{
+        background-image: url(../images/main-bg-img.jpg); z-index: 0; 
+        background-repeat: no-repeat;
+        width: 100%;
+        background-color: #e9d7ca;
+    }
+    .main .record .menu{display: none;}
+
+    .main .main-wrap{max-width: 500px; margin: 0 auto; display: flex; position: relative;  }
+    .main .lp{z-index: 2; width: 70%; padding-left: 2%;}
+    /* lp그림자 */
+    .main .lp::after{
+    content: "";
+    position: absolute;
+    background-image: url(../images/lp-shadow.png);
+    background-repeat: no-repeat;
+    /* width: 378px; */
+    width: 330px;
+    height: 50px;
+    bottom: -0.2%;
+    left: -5.8%;
+    z-index: -2;
+    /* width: 70%; height: 100%;
+    bottom: 0%;
+    left: -5.8%; */
+    /* display: none; */
+    }
+    .main .lp img{
+        width: 100%; vertical-align: bottom; 
+    }
+
+    .main .record{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    left: 50px;
+    /* left: 188px; */
+    /* z-index: 1; */
+    /* 애니메이션 */
+    animation-name: move;
+    /* 얼마에 걸쳐 일어날지 지정 */
+    animation-duration: 2s;
+    /* 로드되고 나서 언제 애니메이션 시작 */
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    /* animation-play-state:paused; */
+    }
+    /* 레코드 그림자 */
+    .main .record::after{
+    content: "";
+    position: absolute;
+    background-image: url(../images/record-shadow.png);
+    background-repeat: no-repeat;
+    width: 354px;
+    height: 90px;
+    left: -37px;
+    bottom: -4px;
+    z-index: -2;
+    /* display: none; */
+    }
+
+    .main .record .rotate{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    height: 298.44px;
+    
+    /* left: 378px; */
+    /* z-index: 1; */
+    /* 애니메이션 */
+    animation-name: rotate;
+    /* 얼마에 걸쳐 일어날지 지정 */
+    animation-duration: 3s;
+    /* 로드되고 나서 언제 애니메이션 시작 */
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    /* animation-play-state:paused; */
+    }
+    .main .record .rotate img{ 
+        bottom: 0; width: 298.44px; }
+
+
+    @keyframes rotate{
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes move{
+        0%{
+            /* left: 80px; */
+        }
+        100%{
+            left: 184px;
+        }
+    }
+
+
+    /* 카피라이트 */
+    .footer p{
+        font-size: 18px;
+    }
+
+}
